@@ -56,7 +56,7 @@ Best Parameters
 ![Best HPO](best_hpo.png)
 
 ## Debugging and Profiling
-**TODO**: Give an overview of how you performed model debugging and profiling in Sagemaker
+Give an overview of how you performed model debugging and profiling in Sagemaker
 
 For debugging and profiling, we chose to monitor Loss Not Decreasing rule during debudding and ProfilerReport was used to generate a report with stats about the training job. We also had to create a hook using the smdebug package and it can be seen in use within the train_model.py 
 
@@ -70,15 +70,13 @@ rules = [
 
 
 ### Results
-**TODO**: What are the results/insights did you get by profiling/debugging your model?
+What are the results/insights did you get by profiling/debugging your model?
 
 It took around 36mins to run the model. The GPU was under utlizied because of low number of batchsize, could have saved the extra computing power by using a different approch or using a small instance, or increasing the batch size.
 
-**TODO** Remember to provide the profiler html/pdf file in your submission.
-
 
 ## Model Deployment
-**TODO**: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 ```
 cwd = os.getcwd()
 path = os.path.join(cwd, "test/001.Affenpinscher/Affenpinscher_00047.jpg")
