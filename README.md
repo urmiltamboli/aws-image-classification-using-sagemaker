@@ -42,12 +42,12 @@ Remember that your README should:
 For debugging and profiling, we chose to monitor Loss Not Decreasing rule during debudding and ProfilerReport was used to generate a report with stats about the training job. We also had to create a hook using the smdebug package and it can be seen in use within the train_model.py 
 
 Added the below query:
-
+```
 rules = [ 
     Rule.sagemaker(rule_configs.loss_not_decreasing()),
     ProfilerRule.sagemaker(rule_configs.ProfilerReport())
 ]
-
+```
 
 
 ### Results
@@ -60,7 +60,7 @@ It took around 36mins to run the model. The GPU was under utlizied because of lo
 
 ## Model Deployment
 **TODO**: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
-
+```
 cwd = os.getcwd()
 path = os.path.join(cwd, "test/001.Affenpinscher/Affenpinscher_00047.jpg")
 pil_img = Image.open(path)
@@ -76,11 +76,11 @@ preprocess = T.Compose([
 ])
 
 image = preprocess(pil_img).unsqueeze(0)
-
+```
 This query will load the image from the path and transform it. Further, we use the predictor to predict the image
-
+```
 response = predictor.predict(image)
-
+```
 
 **TODO** Remember to provide a screenshot of the deployed active endpoint in Sagemaker.
 
