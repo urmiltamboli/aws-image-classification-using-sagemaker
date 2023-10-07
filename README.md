@@ -25,7 +25,7 @@ In this experiment we are using ResNet50 pretrained model for image classificati
     
 Remember that your README should:
 - Include a screenshot of completed training jobs
-https://github.com/urmiltamboli/aws-image-classification-using-sagemaker/blob/ffc327bf9d35f61a91932680ab4713d77a98ed06/job1.png
+![Job One] job1.png
 
 - Logs metrics during the training process
 
