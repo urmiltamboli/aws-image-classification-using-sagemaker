@@ -101,6 +101,6 @@ This query will load the image from the path and transform it. Further, we use t
 response = predictor.predict(image)
 ```
 
-**TODO** Remember to provide a screenshot of the deployed active endpoint in Sagemaker.
-
+Remember to provide a screenshot of the deployed active endpoint in Sagemaker.
+![Endpoint](endpoint.png)
 
