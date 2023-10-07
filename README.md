@@ -26,6 +26,12 @@ In this experiment we are using ResNet50 pretrained model for image classificati
 Remember that your README should:
 - Include a screenshot of completed training jobs
 
+Best Parameters
+![All Training Jobs](training_jobs.png)
+
+
+- Logs metrics during the training process
+
 Job 1
 ![Training Jobs 1](job1.png)
 
@@ -35,17 +41,19 @@ Job 2
 Job 3
 ![Training Jobs 3](job3.png)
 
-Best Parameters
-![Best HPO](best_hpo.png)
-
-- Logs metrics during the training process
-
-
 - Tune at least two hyperparameters
-
+```
+hyperparameter_ranges = {
+    "lr": ContinuousParameter(0.001, 0.1),
+    "batch-size": CategoricalParameter([32, 64, 128]),
+    "epochs": CategoricalParameter([1, 2])
+}
+```
 
 - Retrieve the best best hyperparameters from all your training jobs
 
+Best Parameters
+![Best HPO](best_hpo.png)
 
 ## Debugging and Profiling
 **TODO**: Give an overview of how you performed model debugging and profiling in Sagemaker
