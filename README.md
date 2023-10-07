@@ -25,7 +25,17 @@ In this experiment we are using ResNet50 pretrained model for image classificati
     
 Remember that your README should:
 - Include a screenshot of completed training jobs
+  Job 1
 ![Training Jobs 1](job1.png)
+
+ Job 2
+![Training Jobs 2](job2.png)
+
+ Job 3
+![Training Jobs 3](job3.png)
+
+ Best Parameters
+![Best HPO](best_hpo.png)
 
 - Logs metrics during the training process
 
